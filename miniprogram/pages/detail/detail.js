@@ -5,7 +5,9 @@ Page({
    * Page initial data
    */
   data: {
-    detail: null
+    detail: null,
+    burden: [],
+    ingredients: []
   },
 
   /**
@@ -14,7 +16,12 @@ Page({
   onLoad: function (options) {
     const detail = JSON.parse(options.item);
     this.setData({
-      detail: detail
+      detail: detail,
+      ingredients: detail.ingredients.split(';'),
+      burden: detail.burden.split(';')
+    });
+    wx.setNavigationBarTitle({
+      title: detail.title
     });
   },
 

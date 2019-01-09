@@ -9,6 +9,9 @@ Page({
     logged: false,
     cookList: null
   },
+  prevent(){
+    // prevent
+  },
   queryCook: function queryCook(params) {
       let res = api.queryCook({
         menu:params.menu,
@@ -61,6 +64,12 @@ Page({
       });
   },
 
+  queryCategory:function queryCategory(){
+    let res = api.queryCategory().then((res)=>{
+      console.log(res);
+    })
+  },
+
   toDetal:function(e){
     const item = JSON.stringify(e.currentTarget.dataset.item);
     wx.navigateTo({
@@ -70,11 +79,12 @@ Page({
 
   onShow: function () {
     let queryParams = {
-      menu: '红烧肉',
+      menu: '家常菜',
       rn: 60,
       pn: 1
     }
     this.queryCook(queryParams);
+    this.queryCategory();
   },
 
   onLoad: function() {

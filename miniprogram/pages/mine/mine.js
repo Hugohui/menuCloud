@@ -8,6 +8,12 @@ Page({
 
   },
 
+  toMyAdd: function(){
+    wx.navigateTo({
+      url: '../myAdd/myAdd'
+    });
+  },
+
   /**
    * Lifecycle function--Called when page load
    */

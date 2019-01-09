@@ -1,7 +1,23 @@
 <!--pages/detail/detail.wxml-->
-<view wx:for="{{detail.steps}}" wx:key="{{index}}">
-  <view>{{item.step}}</view>
-  <view>
-    <image src="{{item.img}}" />
+<view class="detail-container">
+  <view style="text-indent: 60rpx;">{{detail.imtro}}</view>
+  <view class="main-info" style="background-image:url({{detail.albums[0]}});"></view>
+  <view class="head-title">主料</view>
+  <view class="need">
+    <view wx:for="{{ingredients}}" wx:key="index">{{index+1}}、{{item}}</view>
+  </view>
+  <view class="head-title">辅料</view>
+  <view class="need">
+    <view wx:for="{{burden}}" wx:key="index">{{index+1}}、{{item}}</view>
+  </view>
+  <view class="head-title">步骤</view>
+  <view class="step" wx:for="{{detail.steps}}" wx:key="{{index}}">
+    <view class="step-title">{{item.step}}</view>
+    <view class="step-img" style="background-image: url({{item.img}})">
+    </view>
+  </view>
+  <view class="footer">
+    <button open-type="share">分享</button>
+    <button>收藏</button>
   </view>
 </view>

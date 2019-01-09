@@ -3,6 +3,7 @@
     "pages/index/index",
     "pages/mine/mine",
     "pages/login/login",
+    "pages/myAdd/myAdd",
     "pages/detail/detail",
     "pages/userConsole/userConsole",
     "pages/storageConsole/storageConsole",
@@ -15,7 +16,7 @@
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#4EB196",
-    "navigationBarTitleText": "吃什么",
+    "navigationBarTitleText": "看美食",
     "navigationBarTextStyle": "#fff"
   },
   "tabBar": {

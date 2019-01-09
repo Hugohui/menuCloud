@@ -1,1 +1,10 @@
 <!--pages/mine/mine.wxml-->
+<view class="mine-container">
+    <view></view>
+    <view class="do-list">
+        <view class="item">
+            <button bindtap="toMyAdd">我的收藏</button>
+            <image src="../../images/icon-arrow-right.png"/>
+        </view>
+    </view>
+</view>
