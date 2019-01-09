@@ -1,0 +1,22 @@
+<!--index.wxml-->
+<view class="index-container">
+  <view class="items">
+    <view wx:for="{{cookList}}" wx:key="index" class="item" bindtap="toDetal" data-item="{{item}}">
+      <view class="item__title">{{item.title}}</view>
+      <view class="item__imtro">{{item.imtro}}</view>
+      <view class="item__albums" style="background-image: url({{item.albums[0]}})">
+      </view>
+      <view class="item__btn-group">
+        <view class="btn">
+          <button open-type="share">
+            <image src="../../images/icon-share.png" />
+          </button>
+          <button>
+            <image src="../../images/icon-discuss.png" />
+          </button>
+        </view>
+        <view class="todetal">查看教程>></view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,7 @@
+<!--pages/detail/detail.wxml-->
+<view wx:for="{{detail.steps}}" wx:key="{{index}}">
+  <view>{{item.step}}</view>
+  <view>
+    <image src="{{item.img}}" />
+  </view>
+</view>

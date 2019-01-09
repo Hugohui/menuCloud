@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "regenerator": "^0.13.3"
+  }
+}
