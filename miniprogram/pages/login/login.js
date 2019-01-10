@@ -31,9 +31,7 @@ Page({
     // 调用云函数
     wx.cloud.callFunction({
       name: 'login',
-      data: {
-        userInfo: userInfo
-      },
+      data: {},
       success: res => {
         app.globalData.openid = res.result.openid
         const db = wx.cloud.database();
@@ -42,8 +40,11 @@ Page({
           }).get({
             success: res => {
               if(res.data.length == 0){
+                let data = {
+                  createTime: Date.now()
+                }
                 db.collection('users').add({
-                  data: userInfo,
+                  data: Object.assign({},userInfo,data),
                   success: res => {
                     console.log('add user success');
                   },
