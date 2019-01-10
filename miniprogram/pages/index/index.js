@@ -77,6 +77,10 @@ Page({
     });
   },
 
+  collectItem:function(e) {
+    const item = JSON.stringify(e.currentTarget.dataset.item);
+  },
+
   onShow: function () {
     let queryParams = {
       menu: '家常菜',
@@ -84,7 +88,7 @@ Page({
       pn: 1
     }
     this.queryCook(queryParams);
-    this.queryCategory();
+    // this.queryCategory();
   },
 
   onLoad: function() {

@@ -11,8 +11,8 @@
           <button open-type="share" catchtap="prevent">
             <image src="../../images/icon-share.png" />
           </button>
-          <button>
-            <image src="../../images/icon-discuss.png" />
+          <button catchtap="collectItem" data-item="{{item}}">
+            <image src="../../images/icon-collect.png" />
           </button>
         </view>
         <view class="todetal">查看教程>></view>
